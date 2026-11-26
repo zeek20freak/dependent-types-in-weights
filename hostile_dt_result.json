@@ -1,0 +1,140 @@
+[
+ {
+  "name": "H1 universe smuggling via identity: (\u03bbA:Type 0. \u03bbx:A. x) Type 0",
+  "ref_accepts": false,
+  "mine_accepts": false,
+  "agree": true,
+  "ref_fail": {
+   "path": [
+    "arg"
+   ],
+   "kind": "mismatch",
+   "expected": "Type 0",
+   "actual": "Type 1",
+   "message": "expected Type 0, got Type 1"
+  },
+  "my_fail": {
+   "path": [
+    "arg"
+   ],
+   "kind": "mismatch",
+   "expected": "Type 0",
+   "actual": "Type 1",
+   "message": "argument type does not match the domain"
+  }
+ },
+ {
+  "name": "H2 universe smuggling via identity, Pi argument",
+  "ref_accepts": false,
+  "mine_accepts": false,
+  "agree": true,
+  "ref_fail": {
+   "path": [
+    "arg"
+   ],
+   "kind": "mismatch",
+   "expected": "Type 0",
+   "actual": "Type 1",
+   "message": "expected Type 0, got Type 1"
+  },
+  "my_fail": {
+   "path": [
+    "arg"
+   ],
+   "kind": "mismatch",
+   "expected": "Type 0",
+   "actual": "Type 1",
+   "message": "argument type does not match the domain"
+  }
+ },
+ {
+  "name": "H3 eta under a Pi binder: \u03a0f:(A\u2192A). f \u2261 \u03a0f:(A\u2192A). \u03bbx:A. f x",
+  "ref": true,
+  "mine": true,
+  "agree": true
+ },
+ {
+  "name": "H4 eta against a non-function variable: \u03bbx:A. x vs A",
+  "ref": false,
+  "mine": false,
+  "agree": true
+ },
+ {
+  "name": "H5 type-level self-application through identity",
+  "ref_accepts": false,
+  "mine_accepts": false,
+  "agree": true,
+  "ref_fail": {
+   "path": [
+    "arg"
+   ],
+   "kind": "mismatch",
+   "expected": "Type 0",
+   "actual": "(Type 0 -> Type 0)",
+   "message": "expected Type 0, got (Type 0 -> Type 0)"
+  },
+  "my_fail": {
+   "path": [
+    "arg"
+   ],
+   "kind": "mismatch",
+   "expected": "Type 0",
+   "actual": "(Pi x0:Type 0. Type 0)",
+   "message": "argument type does not match the domain"
+  }
+ },
+ {
+  "name": "H6 shadowing with the argument being the shadowed name",
+  "ref_accepts": true,
+  "mine_accepts": true,
+  "agree": true,
+  "ref_fail": null,
+  "my_fail": null
+ },
+ {
+  "name": "H7 triple shadowing, body type mentions middle binder",
+  "ref_accepts": true,
+  "mine_accepts": true,
+  "agree": true,
+  "ref_fail": null,
+  "my_fail": null
+ },
+ {
+  "name": "H8 Pi codomain is a Lam (function as a type)",
+  "ref_accepts": false,
+  "mine_accepts": false,
+  "agree": true,
+  "ref_fail": {
+   "path": [
+    "binder"
+   ],
+   "kind": "mismatch",
+   "expected": "(A -> A)",
+   "actual": "(A -> (\u03bby:A. y))",
+   "message": "binder type (A -> (\u03bby:A. y)) does not match domain (A -> A)"
+  },
+  "my_fail": {
+   "path": [
+    "binder"
+   ],
+   "kind": "mismatch",
+   "expected": "(Pi x0:free2. free2)",
+   "actual": "(Pi x0:free2. (lam x1:free2. x1))",
+   "message": "lambda annotation does not match the Pi domain"
+  }
+ },
+ {
+  "name": "H9 (a2) shadowing capture: inner Lam type mentions outer A",
+  "ref_accepts": true,
+  "mine_accepts": true,
+  "agree": true,
+  "ref_fail": null,
+  "my_fail": null
+ },
+ {
+  "name": "H10 beta under a Pi binder: \u03a0x:A. (\u03bby:Type 0. y) A \u2261 \u03a0x:A. A",
+  "ref": true,
+  "mine": true,
+  "agree": true
+ }
+]

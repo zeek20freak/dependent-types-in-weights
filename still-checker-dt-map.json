@@ -1,0 +1,464 @@
+{
+ "entry_results": {
+  "ptr left-child permutation": {
+   "entry": "ptr left-child permutation",
+   "result": "break",
+   "stage": "screen",
+   "failures": [
+    [
+     "check induction principle",
+     "EXC IndexError: index 16 is out of bounds for axis 0 with size 16"
+    ]
+   ],
+   "seconds": 0.0
+  },
+  "ptr right-child permutation": {
+   "entry": "ptr right-child permutation",
+   "result": "break",
+   "stage": "screen",
+   "failures": [
+    [
+     "check induction principle",
+     "EXC RuntimeError: register pool exhausted: live=16 pool=16"
+    ]
+   ],
+   "seconds": 0.1
+  },
+  "ptr parent permutation": {
+   "entry": "ptr parent permutation",
+   "result": "break",
+   "stage": "screen",
+   "failures": [
+    [
+     "check add 2 3 : Nat",
+     "mode ERROR"
+    ]
+   ],
+   "seconds": 1.3
+  },
+  "ptr rec-base permutation": {
+   "entry": "ptr rec-base permutation",
+   "result": "break",
+   "stage": "screen",
+   "failures": [
+    [
+     "check induction principle",
+     "EXC RuntimeError: register pool exhausted: live=16 pool=16"
+    ]
+   ],
+   "seconds": 0.5
+  },
+  "ptr rec-step permutation": {
+   "entry": "ptr rec-step permutation",
+   "result": "break",
+   "stage": "screen",
+   "failures": [
+    [
+     "check induction principle",
+     "mode ERROR"
+    ]
+   ],
+   "seconds": 0.5
+  },
+  "ptr rec-target permutation": {
+   "entry": "ptr rec-target permutation",
+   "result": "break",
+   "stage": "screen",
+   "failures": [
+    [
+     "check induction principle",
+     "EXC RuntimeError: register pool exhausted: live=16 pool=16"
+    ]
+   ],
+   "seconds": 0.7
+  },
+  "ctx shift-down": {
+   "entry": "ctx shift-down",
+   "result": "break",
+   "stage": "screen",
+   "failures": [
+    [
+     "check induction principle",
+     "mode ERROR"
+    ]
+   ],
+   "seconds": 0.1
+  },
+  "ctx shift-up": {
+   "entry": "ctx shift-up",
+   "result": "break",
+   "stage": "screen",
+   "failures": [
+    [
+     "check induction principle",
+     "mode ERROR"
+    ]
+   ],
+   "seconds": 0.1
+  },
+  "ctrl shift-down": {
+   "entry": "ctrl shift-down",
+   "result": "break",
+   "stage": "screen",
+   "failures": [
+    [
+     "check Type 0 : Type 0 (Girard)",
+     "mode HALT"
+    ]
+   ],
+   "seconds": 0.4
+  },
+  "ctrl shift-up": {
+   "entry": "ctrl shift-up",
+   "result": "break",
+   "stage": "screen",
+   "failures": [
+    [
+     "check Type 0 : Type 0 (Girard)",
+     "mode HALT"
+    ]
+   ],
+   "seconds": 0.4
+  },
+  "wstack shift-down": {
+   "entry": "wstack shift-down",
+   "result": "break",
+   "stage": "screen",
+   "failures": [
+    [
+     "check induction principle",
+     "EXC RuntimeError: control fired total 0.0 at step 38 mode WALK (logits [-1.5 -2.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -0.5\n -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5\n -1.5 -1.5 -1.5 -1.5 -2.5 -1.5 -1.5 -2.5 -1.5 -1.5 -1.5 -2.5 -1.5 -1.5\n -2.5 -1.5 -1.5 -1.5 -2.5 -1.5 -1.5 -1.5 -1.5 -2.5 -2.5 -2.5 -2.5 -1.5\n -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -2.5 -1.5 -2.5 -2.5 -1.5 -1.5 -2.5\n -2.5 -2.5 -1.5 -1.5 -2.5 -2.5 -1.5 -1.5 -1.5 -3.5 -2.5 -2.5 -3.5 -3.5\n -2.5 -3.5 -3.5 -3.5 -3.5 -3.5 -1.5 -2.5 -2.5 -1.5 -2.5 -2.5 -1.5 -2.5\n -2.5 -1.5 -1.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -1.5 -1.5 -1.5 -2.5 -2.5\n -2.5 -1.5 -1.5 -0.5])"
+    ]
+   ],
+   "seconds": 0.0
+  },
+  "wstack shift-up": {
+   "entry": "wstack shift-up",
+   "result": "break",
+   "stage": "screen",
+   "failures": [
+    [
+     "check induction principle",
+     "EXC RuntimeError: control fired total 0.0 at step 38 mode WALK (logits [-1.5 -2.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -0.5\n -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5\n -1.5 -1.5 -1.5 -1.5 -2.5 -1.5 -1.5 -2.5 -1.5 -1.5 -1.5 -2.5 -1.5 -1.5\n -2.5 -1.5 -1.5 -1.5 -2.5 -1.5 -1.5 -1.5 -1.5 -2.5 -2.5 -2.5 -2.5 -1.5\n -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -2.5 -1.5 -2.5 -2.5 -1.5 -1.5 -2.5\n -2.5 -2.5 -1.5 -1.5 -2.5 -2.5 -1.5 -1.5 -1.5 -3.5 -2.5 -2.5 -3.5 -3.5\n -2.5 -3.5 -3.5 -3.5 -3.5 -3.5 -1.5 -2.5 -2.5 -1.5 -2.5 -2.5 -1.5 -2.5\n -2.5 -1.5 -1.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -1.5 -1.5 -1.5 -2.5 -2.5\n -2.5 -1.5 -1.5 -0.5])"
+    ]
+   ],
+   "seconds": 0.0
+  },
+  "control matrix W_CTRL + bias": {
+   "entry": "control matrix W_CTRL + bias",
+   "result": "break",
+   "stage": "screen",
+   "failures": [
+    [
+     "check induction principle",
+     "EXC RuntimeError: control fired total 0.0 at step 1 mode INFER (logits [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.\n 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.\n 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.\n 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.\n 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.])"
+    ]
+   ],
+   "seconds": 0.0
+  },
+  "node-read slot extraction (E_p)": {
+   "entry": "node-read slot extraction (E_p)",
+   "result": "break",
+   "stage": "screen",
+   "failures": [
+    [
+     "check induction principle",
+     "EXC RuntimeError: control fired total 0.0 at step 1 mode INFER (logits [-1.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -1.5 -1.5 -0.5\n -0.5 -0.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5\n -2.5 -2.5 -1.5 -0.5 -2.5 -1.5 -1.5 -2.5 -1.5 -1.5 -1.5 -2.5 -1.5 -1.5\n -2.5 -1.5 -1.5 -2.5 -1.5 -1.5 -1.5 -1.5 -2.5 -1.5 -2.5 -2.5 -2.5 -1.5\n -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -3.5 -1.5 -2.5 -2.5 -1.5 -1.5 -2.5\n -2.5 -2.5 -1.5 -1.5 -2.5 -2.5 -1.5 -1.5 -1.5 -3.5 -2.5 -2.5 -3.5 -3.5\n -3.5 -3.5 -3.5 -3.5 -3.5 -3.5 -1.5 -2.5 -2.5 -1.5 -2.5 -2.5 -1.5 -2.5\n -2.5 -1.5 -1.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -1.5 -1.5 -2.5 -1.5 -2.5\n -2.5 -1.5 -1.5 -1.5])"
+    ]
+   ],
+   "seconds": 0.0
+  },
+  "node-read sel mux": {
+   "entry": "node-read sel mux",
+   "result": "break",
+   "stage": "screen",
+   "failures": [
+    [
+     "check induction principle",
+     "mode ERROR"
+    ]
+   ],
+   "seconds": 0.0
+  },
+  "node-write (write + erase)": {
+   "entry": "node-write (write + erase)",
+   "result": "break",
+   "stage": "screen",
+   "failures": [
+    [
+     "check induction principle",
+     "EXC RuntimeError: control fired total 0.0 at step 6 mode WALK (logits [-2.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -0.5\n -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5\n -1.5 -1.5 -1.5 -1.5 -2.5 -1.5 -1.5 -2.5 -1.5 -1.5 -1.5 -2.5 -1.5 -1.5\n -2.5 -1.5 -1.5 -2.5 -1.5 -1.5 -1.5 -1.5 -2.5 -1.5 -2.5 -2.5 -2.5 -1.5\n -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -3.5 -1.5 -2.5 -2.5 -1.5 -1.5 -2.5\n -2.5 -2.5 -1.5 -1.5 -2.5 -2.5 -1.5 -1.5 -1.5 -3.5 -2.5 -2.5 -3.5 -3.5\n -3.5 -3.5 -3.5 -3.5 -3.5 -3.5 -1.5 -2.5 -2.5 -1.5 -2.5 -2.5 -1.5 -2.5\n -2.5 -1.5 -1.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -1.5 -1.5 -2.5 -1.5 -2.5\n -2.5 -1.5 -1.5 -0.5])"
+    ]
+   ],
+   "seconds": 0.0
+  },
+  "register-file per-register gating": {
+   "entry": "register-file per-register gating",
+   "result": "hold",
+   "stage": "lockstep",
+   "failures": [],
+   "seconds": 98.4
+  },
+  "frame write routing": {
+   "entry": "frame write routing",
+   "result": "break",
+   "stage": "screen",
+   "failures": [
+    [
+     "check Type 0 : Type 0 (Girard)",
+     "mode HALT"
+    ]
+   ],
+   "seconds": 0.3
+  },
+  "walk-item write routing": {
+   "entry": "walk-item write routing",
+   "result": "break",
+   "stage": "screen",
+   "failures": [
+    [
+     "check induction principle",
+     "mode ERROR"
+    ]
+   ],
+   "seconds": 0.0
+  },
+  "ctx slot write routing": {
+   "entry": "ctx slot write routing",
+   "result": "break",
+   "stage": "screen",
+   "failures": [
+    [
+     "check induction principle",
+     "mode ERROR"
+    ]
+   ],
+   "seconds": 0.0
+  },
+  "free-stack push/pop routing": {
+   "entry": "free-stack push/pop routing",
+   "result": "break",
+   "stage": "screen",
+   "failures": [
+    [
+     "check induction principle",
+     "EXC RuntimeError: pruned free-stack routing"
+    ]
+   ],
+   "seconds": 0.0
+  },
+  "liveness OR (live bits)": {
+   "entry": "liveness OR (live bits)",
+   "result": "break",
+   "stage": "screen",
+   "failures": [
+    [
+     "check induction principle",
+     "EXC RuntimeError: register pool exhausted: live=16 pool=16"
+    ]
+   ],
+   "seconds": 0.0
+  },
+  "fail-path construction": {
+   "entry": "fail-path construction",
+   "result": "break",
+   "stage": "screen",
+   "failures": [
+    [
+     "check Type 0 : Type 0 (Girard)",
+     "rejected ((), 'none')"
+    ]
+   ],
+   "seconds": 2.3
+  },
+  "eta error-catch construction": {
+   "entry": "eta error-catch construction",
+   "result": "hold",
+   "stage": "lockstep",
+   "failures": [],
+   "seconds": 97.2
+  },
+  "comparison bits (idx/depth/level)": {
+   "entry": "comparison bits (idx/depth/level)",
+   "result": "break",
+   "stage": "screen",
+   "failures": [
+    [
+     "check induction principle",
+     "EXC RuntimeError: control fired total 0.0 at step 25 mode INFER (logits [-0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -1.5 -1.5 -0.5\n -0.5 -0.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5\n -2.5 -2.5 -1.5 -1.5 -1.5 -2.5 -1.5 -1.5 -2.5 -1.5 -1.5 -1.5 -2.5 -1.5\n -1.5 -2.5 -0.5 -2.5 -1.5 -1.5 -1.5 -1.5 -2.5 -1.5 -2.5 -2.5 -1.5 -2.5\n -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -3.5 -1.5 -2.5 -2.5 -1.5 -1.5 -2.5\n -2.5 -2.5 -1.5 -1.5 -2.5 -2.5 -1.5 -1.5 -1.5 -3.5 -2.5 -2.5 -3.5 -2.5\n -3.5 -3.5 -3.5 -2.5 -3.5 -3.5 -1.5 -2.5 -2.5 -1.5 -2.5 -2.5 -1.5 -2.5\n -2.5 -1.5 -1.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -1.5 -1.5 -2.5 -1.5 -2.5\n -2.5 -1.5 -1.5 -1.5])"
+    ]
+   ],
+   "seconds": 0.0
+  },
+  "control derived-bit threshold layers": {
+   "entry": "control derived-bit threshold layers",
+   "result": "break",
+   "stage": "screen",
+   "failures": [
+    [
+     "check induction principle",
+     "EXC RuntimeError: control fired total 0.0 at step 5 mode WHNF (logits [-2.5 -2.5 -0.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -0.5 -0.5 -0.5\n -0.5 -0.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5\n -2.5 -2.5 -1.5 -1.5 -2.5 -2.5 -1.5 -2.5 -2.5 -1.5 -1.5 -1.5 -1.5 -1.5\n -2.5 -2.5 -1.5 -2.5 -2.5 -1.5 -1.5 -1.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5\n -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -1.5 -3.5 -2.5 -2.5 -2.5 -1.5 -1.5 -2.5\n -2.5 -2.5 -2.5 -1.5 -2.5 -2.5 -2.5 -1.5 -1.5 -3.5 -3.5 -3.5 -3.5 -2.5\n -3.5 -3.5 -2.5 -3.5 -3.5 -3.5 -2.5 -2.5 -2.5 -1.5 -2.5 -2.5 -1.5 -2.5\n -2.5 -1.5 -1.5 -2.5 -2.5 -2.5 -2.5 -2.5 -2.5 -1.5 -1.5 -2.5 -2.5 -2.5\n -2.5 -1.5 -1.5 -1.5])"
+    ]
+   ],
+   "seconds": 0.0
+  }
+ },
+ "coverage": {
+  "ptr left-child permutation": {
+   "total": 1023,
+   "read": 55,
+   "never": 968,
+   "note": "input positions used: 55"
+  },
+  "ptr right-child permutation": {
+   "total": 1023,
+   "read": 55,
+   "never": 968,
+   "note": "input positions used: 55"
+  },
+  "ptr parent permutation": {
+   "total": 2046,
+   "read": 9,
+   "never": 2037,
+   "note": "input positions used: 9"
+  },
+  "ptr rec-base permutation": {
+   "total": 511,
+   "read": 8,
+   "never": 503,
+   "note": "input positions used: 8"
+  },
+  "ptr rec-step permutation": {
+   "total": 255,
+   "read": 8,
+   "never": 247,
+   "note": "input positions used: 8"
+  },
+  "ptr rec-target permutation": {
+   "total": 255,
+   "read": 8,
+   "never": 247,
+   "note": "input positions used: 8"
+  },
+  "ctx shift-down": {
+   "total": 14462,
+   "read": 81,
+   "never": 14381,
+   "note": "input positions used: 81"
+  },
+  "ctx shift-up": {
+   "total": 14462,
+   "read": 81,
+   "never": 14381,
+   "note": "input positions used: 112"
+  },
+  "ctrl shift-down": {
+   "total": 135421,
+   "read": 1026,
+   "never": 134395,
+   "note": "input positions used: 1026"
+  },
+  "ctrl shift-up": {
+   "total": 135421,
+   "read": 1026,
+   "never": 134395,
+   "note": "input positions used: 1283"
+  },
+  "wstack shift-down": {
+   "total": 37326,
+   "read": 402,
+   "never": 36924,
+   "note": "input positions used: 402"
+  },
+  "wstack shift-up": {
+   "total": 37326,
+   "read": 402,
+   "never": 36924,
+   "note": "input positions used: 648"
+  },
+  "control matrix W_CTRL + bias": {
+   "total": 430,
+   "read": 429,
+   "never": 1,
+   "note": "feature positions used: 138/156; bias all read"
+  },
+  "node-read slot extraction (E_p)": {
+   "total": 49128,
+   "read": 451,
+   "never": 48677,
+   "note": "slots read: 96"
+  },
+  "node-read sel mux": {
+   "total": 432,
+   "read": 301,
+   "never": 131,
+   "note": "sources read: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]"
+  },
+  "node-write (write + erase)": {
+   "total": 98256,
+   "read": 102,
+   "never": 98154,
+   "note": "write positions: 59, erase positions: 43"
+  },
+  "register-file per-register gating": {
+   "total": 786048,
+   "read": 43039,
+   "never": 743009,
+   "note": "registers written (write_tree_reg is dead; __init__ ctx writes): [0, 1, 2, 3, 4, 5, 6]"
+  },
+  "frame write routing": {
+   "total": 10417,
+   "read": 257,
+   "never": 10160,
+   "note": ""
+  },
+  "walk-item write routing": {
+   "total": 6221,
+   "read": 246,
+   "never": 5975,
+   "note": ""
+  },
+  "ctx slot write routing": {
+   "total": 2066,
+   "read": 33,
+   "never": 2033,
+   "note": ""
+  },
+  "free-stack push/pop routing": {
+   "total": 32,
+   "read": 32,
+   "never": 0,
+   "note": "registers freed: 16, allocated: 16"
+  },
+  "liveness OR (live bits)": {
+   "total": 1664,
+   "read": 237,
+   "never": 1427,
+   "note": "distinct (reg, field) pairs: 237"
+  },
+  "fail-path construction": {
+   "total": 1344,
+   "read": 112,
+   "never": 1232,
+   "note": "errors: True, (slot,kind) pairs: 7, routing triples: 7"
+  },
+  "eta error-catch construction": {
+   "total": 2334,
+   "read": 8,
+   "never": 2326,
+   "note": "slots scanned: 2, catch happened: False"
+  },
+  "comparison bits (idx/depth/level)": {
+   "total": 512,
+   "read": 512,
+   "never": 0,
+   "note": "bare literal, kept whole; idx<depth (var_ok/var_bad) evaluated; SUBST idx==k/>k (w_graft/w_gt/w_var_lt) evaluated; level max evaluated (4 pairs)"
+  },
+  "control derived-bit threshold layers": {
+   "total": 337,
+   "read": 284,
+   "never": 53,
+   "note": "(fidx,depth) pairs: 31/72; level pairs: 4/16; rest evaluated every step"
+  }
+ }
+}

@@ -1,0 +1,641 @@
+{
+  "unbound_variable": {
+    "mine": {
+      "term": "Var(5) in 3-entry ctx",
+      "fail": {
+        "path": [],
+        "kind": "unbound",
+        "expected": null,
+        "actual": null,
+        "message": "variable 5 is unbound"
+      }
+    },
+    "ref": {
+      "term": "Var('zz') not in ctx",
+      "fail": {
+        "path": [],
+        "kind": "unbound",
+        "expected": null,
+        "actual": null,
+        "message": "unbound variable zz"
+      }
+    }
+  },
+  "capture": {
+    "total": 5,
+    "verdict_and_path_agreement": "5/5",
+    "cases": [
+      {
+        "name": "capture/a1 shadowed binders, inner wins",
+        "suite": "mine",
+        "kind": "check",
+        "ref_verdict": true,
+        "my_verdict": true,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 0,
+        "path_agree": true,
+        "seconds": 0.00017933899994204694
+      },
+      {
+        "name": "capture/a2 App type under a shadowing Pi",
+        "suite": "mine",
+        "kind": "check",
+        "ref_verdict": true,
+        "my_verdict": true,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 0,
+        "path_agree": true,
+        "seconds": 0.00017251799999939976
+      },
+      {
+        "name": "capture/a3 beta-reduction must not capture (defeq True)",
+        "suite": "mine",
+        "kind": "defeq",
+        "ref_verdict": true,
+        "my_verdict": true,
+        "want": true,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 1,
+        "path_agree": true,
+        "seconds": 4.60280000424973e-05
+      },
+      {
+        "name": "capture/a4 beta-reduction must not capture (defeq False)",
+        "suite": "mine",
+        "kind": "defeq",
+        "ref_verdict": false,
+        "my_verdict": false,
+        "want": false,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 1,
+        "path_agree": true,
+        "seconds": 3.959900004701922e-05
+      },
+      {
+        "name": "capture/a5 shadowed type variable in a Pi",
+        "suite": "mine",
+        "kind": "check",
+        "ref_verdict": true,
+        "my_verdict": true,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 0,
+        "path_agree": true,
+        "seconds": 2.9154000003472902e-05
+      }
+    ]
+  },
+  "eta": {
+    "total": 5,
+    "verdict_and_path_agreement": "5/5",
+    "cases": [
+      {
+        "name": "eta/b1 eta under an App head",
+        "suite": "mine",
+        "kind": "defeq",
+        "ref_verdict": true,
+        "my_verdict": true,
+        "want": true,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 1,
+        "path_agree": true,
+        "seconds": 3.8268000025709625e-05
+      },
+      {
+        "name": "eta/b2 neutral type is a Pi only after reduction",
+        "suite": "mine",
+        "kind": "defeq",
+        "ref_verdict": true,
+        "my_verdict": true,
+        "want": true,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 1,
+        "path_agree": true,
+        "seconds": 0.00015294900003937073
+      },
+      {
+        "name": "eta/b3 different neutrals are not eta-equal",
+        "suite": "mine",
+        "kind": "defeq",
+        "ref_verdict": false,
+        "my_verdict": false,
+        "want": false,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 0,
+        "path_agree": true,
+        "seconds": 4.2463999989195145e-05
+      },
+      {
+        "name": "eta/b4 eta-expansion against a redex expected type",
+        "suite": "mine",
+        "kind": "check",
+        "ref_verdict": true,
+        "my_verdict": true,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 1,
+        "path_agree": true,
+        "seconds": 6.0972000028414186e-05
+      },
+      {
+        "name": "eta/b5 two eta-expansions, different bound names",
+        "suite": "mine",
+        "kind": "defeq",
+        "ref_verdict": true,
+        "my_verdict": true,
+        "want": true,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 0,
+        "path_agree": true,
+        "seconds": 3.652399993825384e-05
+      }
+    ]
+  },
+  "universe": {
+    "total": 8,
+    "verdict_and_path_agreement": "8/8",
+    "cases": [
+      {
+        "name": "univ/c1 Type 2 : Type 3",
+        "suite": "mine",
+        "kind": "check",
+        "ref_verdict": true,
+        "my_verdict": true,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 0,
+        "path_agree": true,
+        "seconds": 1.2438999988262367e-05
+      },
+      {
+        "name": "univ/c2 Pi over Type 2 lands at Type 3",
+        "suite": "mine",
+        "kind": "check",
+        "ref_verdict": true,
+        "my_verdict": true,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 0,
+        "path_agree": true,
+        "seconds": 2.59180000057313e-05
+      },
+      {
+        "name": "univ/c2b same Pi rejected at Type 2",
+        "suite": "mine",
+        "kind": "check_reject",
+        "ref_verdict": false,
+        "my_verdict": false,
+        "agree": true,
+        "ref_fail": {
+          "path": [],
+          "kind": "mismatch",
+          "expected": "Type 2",
+          "actual": "Type 3",
+          "message": "expected Type 2, got Type 3"
+        },
+        "my_fail": {
+          "path": [],
+          "kind": "mismatch",
+          "expected": "Type 2",
+          "actual": "Type 3",
+          "message": "inferred type is not definitionally equal to the expected type"
+        },
+        "my_beta_steps": 0,
+        "path_agree": true,
+        "seconds": 4.5268000008036324e-05
+      },
+      {
+        "name": "univ/c3 Pi x:A. A lands at Type 0",
+        "suite": "mine",
+        "kind": "check",
+        "ref_verdict": true,
+        "my_verdict": true,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 0,
+        "path_agree": true,
+        "seconds": 2.0701000039480277e-05
+      },
+      {
+        "name": "univ/c4 Pi x:A. Type 0 lands at Type 1",
+        "suite": "mine",
+        "kind": "check",
+        "ref_verdict": true,
+        "my_verdict": true,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 0,
+        "path_agree": true,
+        "seconds": 1.8086999943989213e-05
+      },
+      {
+        "name": "univ/c4b same Pi rejected at Type 0",
+        "suite": "mine",
+        "kind": "check_reject",
+        "ref_verdict": false,
+        "my_verdict": false,
+        "agree": true,
+        "ref_fail": {
+          "path": [],
+          "kind": "mismatch",
+          "expected": "Type 0",
+          "actual": "Type 1",
+          "message": "expected Type 0, got Type 1"
+        },
+        "my_fail": {
+          "path": [],
+          "kind": "mismatch",
+          "expected": "Type 0",
+          "actual": "Type 1",
+          "message": "inferred type is not definitionally equal to the expected type"
+        },
+        "my_beta_steps": 0,
+        "path_agree": true,
+        "seconds": 3.144700008306245e-05
+      },
+      {
+        "name": "univ/c5 Pi with a redex domain (reduces to A)",
+        "suite": "mine",
+        "kind": "check",
+        "ref_verdict": true,
+        "my_verdict": true,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 0,
+        "path_agree": true,
+        "seconds": 3.504199992221402e-05
+      },
+      {
+        "name": "univ/c5b Pi with a redex domain, codomain x (rejected: x is a term of type A, not a type)",
+        "suite": "mine",
+        "kind": "check_reject",
+        "ref_verdict": false,
+        "my_verdict": false,
+        "agree": true,
+        "ref_fail": {
+          "path": [
+            "body"
+          ],
+          "kind": "not-a-type",
+          "expected": "a universe",
+          "actual": "((\u03bbT:Type 0. T) A)",
+          "message": "expected a type, got ((\u03bbT:Type 0. T) A)"
+        },
+        "my_fail": {
+          "path": [
+            "body"
+          ],
+          "kind": "not-a-type",
+          "expected": "a universe (Type i)",
+          "actual": "((lam x0:Type 0. x0) free3)",
+          "message": "free0 is not a type (its type is ((lam x0:Type 0. x0) free3))"
+        },
+        "my_beta_steps": 1,
+        "path_agree": true,
+        "seconds": 6.378499995207676e-05
+      }
+    ]
+  },
+  "fuel_omega": {
+    "total": 5,
+    "verdict_agreement": "5/5",
+    "cases": [
+      {
+        "name": "fuel/e1 Omega (term-level self-application)",
+        "suite": "mine",
+        "kind": "infer_reject",
+        "ref_verdict": false,
+        "my_verdict": false,
+        "agree": true,
+        "ref_fail": {
+          "path": [
+            "func",
+            "body",
+            "func"
+          ],
+          "kind": "not-pi",
+          "expected": "a Pi type",
+          "actual": "A",
+          "message": "applied a non-function of type A"
+        },
+        "my_fail": {
+          "path": [
+            "arg",
+            "body",
+            "func"
+          ],
+          "kind": "not-pi",
+          "expected": "a Pi type",
+          "actual": "free3",
+          "message": "function type is not a Pi type"
+        },
+        "my_beta_steps": 0,
+        "path_agree": false,
+        "seconds": 4.3966000021100626e-05
+      },
+      {
+        "name": "fuel/e2 Omega (type-level self-application)",
+        "suite": "mine",
+        "kind": "infer_reject",
+        "ref_verdict": false,
+        "my_verdict": false,
+        "agree": true,
+        "ref_fail": {
+          "path": [
+            "func",
+            "body",
+            "func"
+          ],
+          "kind": "not-pi",
+          "expected": "a Pi type",
+          "actual": "Type 0",
+          "message": "applied a non-function of type Type 0"
+        },
+        "my_fail": {
+          "path": [
+            "arg",
+            "body",
+            "func"
+          ],
+          "kind": "not-pi",
+          "expected": "a Pi type",
+          "actual": "Type 0",
+          "message": "function type is not a Pi type"
+        },
+        "my_beta_steps": 0,
+        "path_agree": false,
+        "seconds": 3.612399996200111e-05
+      },
+      {
+        "name": "fuel/e3 Omega as the expected type",
+        "suite": "mine",
+        "kind": "check_reject",
+        "ref_verdict": false,
+        "my_verdict": false,
+        "agree": true,
+        "ref_fail": {
+          "path": [
+            "func",
+            "body",
+            "func"
+          ],
+          "kind": "not-pi",
+          "expected": "a Pi type",
+          "actual": "Type 0",
+          "message": "applied a non-function of type Type 0"
+        },
+        "my_fail": {
+          "path": [
+            "arg",
+            "body",
+            "func"
+          ],
+          "kind": "not-pi",
+          "expected": "a Pi type",
+          "actual": "Type 0",
+          "message": "function type is not a Pi type"
+        },
+        "my_beta_steps": 0,
+        "path_agree": false,
+        "seconds": 4.995500000859465e-05
+      },
+      {
+        "name": "fuel/e4 nested Omega",
+        "suite": "mine",
+        "kind": "infer_reject",
+        "ref_verdict": false,
+        "my_verdict": false,
+        "agree": true,
+        "ref_fail": {
+          "path": [
+            "func",
+            "body",
+            "func"
+          ],
+          "kind": "not-pi",
+          "expected": "a Pi type",
+          "actual": "A",
+          "message": "applied a non-function of type A"
+        },
+        "my_fail": {
+          "path": [
+            "arg",
+            "arg",
+            "body",
+            "func"
+          ],
+          "kind": "not-pi",
+          "expected": "a Pi type",
+          "actual": "free3",
+          "message": "function type is not a Pi type"
+        },
+        "my_beta_steps": 0,
+        "path_agree": false,
+        "seconds": 3.3059000088542234e-05
+      },
+      {
+        "name": "fuel/e5 Omega as a binder annotation",
+        "suite": "mine",
+        "kind": "infer_reject",
+        "ref_verdict": false,
+        "my_verdict": false,
+        "agree": true,
+        "ref_fail": {
+          "path": [
+            "binder",
+            "func",
+            "body",
+            "func"
+          ],
+          "kind": "not-pi",
+          "expected": "a Pi type",
+          "actual": "Type 0",
+          "message": "applied a non-function of type Type 0"
+        },
+        "my_fail": {
+          "path": [
+            "binder",
+            "arg",
+            "body",
+            "func"
+          ],
+          "kind": "not-pi",
+          "expected": "a Pi type",
+          "actual": "Type 0",
+          "message": "function type is not a Pi type"
+        },
+        "my_beta_steps": 0,
+        "path_agree": false,
+        "seconds": 5.4590999980064225e-05
+      }
+    ]
+  },
+  "doubly_bad": {
+    "total": 3,
+    "verdict_agreement": "3/3",
+    "cases": [
+      {
+        "name": "doubly-bad/f1 bad func (binder) + bad arg App(f, f)",
+        "suite": "mine",
+        "kind": "infer_reject",
+        "ref_verdict": false,
+        "my_verdict": false,
+        "agree": true,
+        "ref_fail": {
+          "path": [
+            "func",
+            "binder"
+          ],
+          "kind": "not-a-type",
+          "expected": "a universe",
+          "actual": "(A -> A)",
+          "message": "expected a type, got (A -> A)"
+        },
+        "my_fail": {
+          "path": [
+            "arg",
+            "arg"
+          ],
+          "kind": "mismatch",
+          "expected": "free3",
+          "actual": "(Pi x0:free3. free3)",
+          "message": "argument type does not match the domain"
+        },
+        "my_beta_steps": 0,
+        "path_agree": false,
+        "seconds": 3.651500003343244e-05
+      },
+      {
+        "name": "doubly-bad/f2 bad func (binder) + bad arg (binder)",
+        "suite": "mine",
+        "kind": "infer_reject",
+        "ref_verdict": false,
+        "my_verdict": false,
+        "agree": true,
+        "ref_fail": {
+          "path": [
+            "func",
+            "binder"
+          ],
+          "kind": "not-a-type",
+          "expected": "a universe",
+          "actual": "(A -> A)",
+          "message": "expected a type, got (A -> A)"
+        },
+        "my_fail": {
+          "path": [
+            "arg",
+            "binder"
+          ],
+          "kind": "not-a-type",
+          "expected": "a universe (Type i)",
+          "actual": "(Pi x0:free4. free4)",
+          "message": "free0 is not a type (its type is (Pi x0:free4. free4))"
+        },
+        "my_beta_steps": 0,
+        "path_agree": false,
+        "seconds": 3.340000000662258e-05
+      },
+      {
+        "name": "doubly-bad/f3 bad func (binder) + bad arg (self-app)",
+        "suite": "mine",
+        "kind": "infer_reject",
+        "ref_verdict": false,
+        "my_verdict": false,
+        "agree": true,
+        "ref_fail": {
+          "path": [
+            "func",
+            "binder"
+          ],
+          "kind": "not-a-type",
+          "expected": "a universe",
+          "actual": "(A -> A)",
+          "message": "expected a type, got (A -> A)"
+        },
+        "my_fail": {
+          "path": [
+            "arg",
+            "body",
+            "func"
+          ],
+          "kind": "not-pi",
+          "expected": "a Pi type",
+          "actual": "free4",
+          "message": "function type is not a Pi type"
+        },
+        "my_beta_steps": 0,
+        "path_agree": false,
+        "seconds": 2.706099996885314e-05
+      }
+    ]
+  },
+  "generator": {
+    "pairs_generated": 200,
+    "verified_both_accept": 200,
+    "generator_rejected_both": 0,
+    "gen_rejected": [],
+    "disagreements": [],
+    "apps_collected": 10,
+    "lams_collected": 63
+  },
+  "substitution_lemma": {
+    "d1_app_substitution": {
+      "ok": 37,
+      "total": 37,
+      "failures": []
+    },
+    "d2_body_substitution": {
+      "ok": 108,
+      "total": 108,
+      "failures": []
+    }
+  },
+  "type_of_type_and_scope": {
+    "ok": 200,
+    "total": 200,
+    "failures": []
+  },
+  "fuzz": {
+    "trials": 500,
+    "verdict_agreement": 500,
+    "fuel_exhaustions_mine": 0,
+    "fuel_exhaustions_ref": 0,
+    "failure_kinds_mine": {
+      "mismatch": 367,
+      "not-pi": 51,
+      "not-a-type": 36
+    },
+    "failure_kinds_ref": {
+      "mismatch": 337,
+      "not-pi": 73,
+      "not-a-type": 44
+    },
+    "max_seconds_per_case": 0.00019411100004163018,
+    "max_beta_steps_mine": 1,
+    "slow_cases": []
+  }
+}

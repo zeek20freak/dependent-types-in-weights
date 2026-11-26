@@ -1,0 +1,746 @@
+{
+  "comparison": {
+    "shared_cases": 18,
+    "my_cases": 25,
+    "total_cases": 43,
+    "verdict_agreement": "43/43",
+    "verdict_agreed": 43,
+    "failure_path_agreement": "43/43",
+    "failure_path_agreed": 43,
+    "disagreements": [],
+    "path_differences": [],
+    "per_case": [
+      {
+        "name": "dependent identity",
+        "suite": "shared",
+        "kind": "check",
+        "ref_verdict": true,
+        "my_verdict": true,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 0,
+        "path_agree": true
+      },
+      {
+        "name": "dependent const",
+        "suite": "shared",
+        "kind": "check",
+        "ref_verdict": true,
+        "my_verdict": true,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 0,
+        "path_agree": true
+      },
+      {
+        "name": "type-level function",
+        "suite": "shared",
+        "kind": "check",
+        "ref_verdict": true,
+        "my_verdict": true,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 0,
+        "path_agree": true
+      },
+      {
+        "name": "conversion: lam x:B. x against (lam A. A -> A) B",
+        "suite": "shared",
+        "kind": "check",
+        "ref_verdict": true,
+        "my_verdict": true,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 1,
+        "path_agree": true
+      },
+      {
+        "name": "(lam A. A -> A) B is a type",
+        "suite": "shared",
+        "kind": "check",
+        "ref_verdict": true,
+        "my_verdict": true,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 0,
+        "path_agree": true
+      },
+      {
+        "name": "eta through check: (K a) against H (lam B. F B)",
+        "suite": "shared",
+        "kind": "check",
+        "ref_verdict": true,
+        "my_verdict": true,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 0,
+        "path_agree": true
+      },
+      {
+        "name": "Type 0 : Type 1",
+        "suite": "shared",
+        "kind": "check",
+        "ref_verdict": true,
+        "my_verdict": true,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 0,
+        "path_agree": true
+      },
+      {
+        "name": "Pi A:Type 0. A -> A : Type 1",
+        "suite": "shared",
+        "kind": "check",
+        "ref_verdict": true,
+        "my_verdict": true,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 0,
+        "path_agree": true
+      },
+      {
+        "name": "S: (A->B->C) -> (A->B) -> A -> C",
+        "suite": "shared",
+        "kind": "check",
+        "ref_verdict": true,
+        "my_verdict": true,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 0,
+        "path_agree": true
+      },
+      {
+        "name": "applied dependent identity: (id_dep A) x : A",
+        "suite": "shared",
+        "kind": "check",
+        "ref_verdict": true,
+        "my_verdict": true,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 0,
+        "path_agree": true
+      },
+      {
+        "name": "defeq eta: f =?= lam x:A. f x",
+        "suite": "shared",
+        "kind": "defeq",
+        "ref_verdict": true,
+        "my_verdict": true,
+        "want": true,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 0,
+        "path_agree": true
+      },
+      {
+        "name": "defeq distinct variables are not equal",
+        "suite": "shared",
+        "kind": "defeq",
+        "ref_verdict": false,
+        "my_verdict": false,
+        "want": false,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 0,
+        "path_agree": true
+      },
+      {
+        "name": "defeq alpha",
+        "suite": "shared",
+        "kind": "defeq",
+        "ref_verdict": true,
+        "my_verdict": true,
+        "want": true,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 0,
+        "path_agree": true
+      },
+      {
+        "name": "Type 0 : Type 0 (Girard)",
+        "suite": "shared",
+        "kind": "check_reject",
+        "ref_verdict": false,
+        "my_verdict": false,
+        "agree": true,
+        "ref_fail": {
+          "path": [],
+          "kind": "mismatch",
+          "expected": "Type 0",
+          "actual": "Type 1",
+          "message": "expected Type 0, got Type 1"
+        },
+        "my_fail": {
+          "path": [],
+          "kind": "mismatch",
+          "expected": "Type 0",
+          "actual": "Type 1",
+          "message": "inferred type is not definitionally equal to the expected type"
+        },
+        "my_beta_steps": 0,
+        "path_agree": true
+      },
+      {
+        "name": "dependent application, wrong argument: (id_dep A) y, y : B",
+        "suite": "shared",
+        "kind": "check_reject",
+        "ref_verdict": false,
+        "my_verdict": false,
+        "agree": true,
+        "ref_fail": {
+          "path": [
+            "arg"
+          ],
+          "kind": "mismatch",
+          "expected": "A",
+          "actual": "B",
+          "message": "expected A, got B"
+        },
+        "my_fail": {
+          "path": [
+            "arg"
+          ],
+          "kind": "mismatch",
+          "expected": "free3",
+          "actual": "free2",
+          "message": "argument type does not match the domain"
+        },
+        "my_beta_steps": 0,
+        "path_agree": true
+      },
+      {
+        "name": "binder annotation is not a type: lam x:f. x, f : A -> A",
+        "suite": "shared",
+        "kind": "infer_reject",
+        "ref_verdict": false,
+        "my_verdict": false,
+        "agree": true,
+        "ref_fail": {
+          "path": [
+            "binder"
+          ],
+          "kind": "not-a-type",
+          "expected": "a universe",
+          "actual": "(A -> A)",
+          "message": "expected a type, got (A -> A)"
+        },
+        "my_fail": {
+          "path": [
+            "binder"
+          ],
+          "kind": "not-a-type",
+          "expected": "a universe (Type i)",
+          "actual": "(Pi x0:free3. free3)",
+          "message": "free0 is not a type (its type is (Pi x0:free3. free3))"
+        },
+        "my_beta_steps": 0,
+        "path_agree": true
+      },
+      {
+        "name": "type-level self-application: lam A:Type 0. A A",
+        "suite": "shared",
+        "kind": "check_reject",
+        "ref_verdict": false,
+        "my_verdict": false,
+        "agree": true,
+        "ref_fail": {
+          "path": [
+            "body",
+            "func"
+          ],
+          "kind": "not-pi",
+          "expected": "a Pi type",
+          "actual": "Type 0",
+          "message": "applied a non-function of type Type 0"
+        },
+        "my_fail": {
+          "path": [
+            "body",
+            "func"
+          ],
+          "kind": "not-pi",
+          "expected": "a Pi type",
+          "actual": "Type 0",
+          "message": "function type is not a Pi type"
+        },
+        "my_beta_steps": 0,
+        "path_agree": true
+      },
+      {
+        "name": "Pi A:Type 0. A -> A : Type 0 (wrong universe)",
+        "suite": "shared",
+        "kind": "check_reject",
+        "ref_verdict": false,
+        "my_verdict": false,
+        "agree": true,
+        "ref_fail": {
+          "path": [],
+          "kind": "mismatch",
+          "expected": "Type 0",
+          "actual": "Type 1",
+          "message": "expected Type 0, got Type 1"
+        },
+        "my_fail": {
+          "path": [],
+          "kind": "mismatch",
+          "expected": "Type 0",
+          "actual": "Type 1",
+          "message": "inferred type is not definitionally equal to the expected type"
+        },
+        "my_beta_steps": 0,
+        "path_agree": true
+      },
+      {
+        "name": "dependent identity",
+        "suite": "mine",
+        "kind": "check",
+        "ref_verdict": true,
+        "my_verdict": true,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 0,
+        "path_agree": true
+      },
+      {
+        "name": "dependent const",
+        "suite": "mine",
+        "kind": "check",
+        "ref_verdict": true,
+        "my_verdict": true,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 0,
+        "path_agree": true
+      },
+      {
+        "name": "type-level function",
+        "suite": "mine",
+        "kind": "check",
+        "ref_verdict": true,
+        "my_verdict": true,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 0,
+        "path_agree": true
+      },
+      {
+        "name": "conversion through a beta-redex in the expected type",
+        "suite": "mine",
+        "kind": "check",
+        "ref_verdict": true,
+        "my_verdict": true,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 1,
+        "path_agree": true
+      },
+      {
+        "name": "the beta-redex is itself a type",
+        "suite": "mine",
+        "kind": "check",
+        "ref_verdict": true,
+        "my_verdict": true,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 0,
+        "path_agree": true
+      },
+      {
+        "name": "eta through check (neutral head, Lam under it)",
+        "suite": "mine",
+        "kind": "check",
+        "ref_verdict": true,
+        "my_verdict": true,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 0,
+        "path_agree": true
+      },
+      {
+        "name": "Type 0 : Type 1",
+        "suite": "mine",
+        "kind": "check",
+        "ref_verdict": true,
+        "my_verdict": true,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 0,
+        "path_agree": true
+      },
+      {
+        "name": "Pi at mixed max: domain level 0, codomain level 1",
+        "suite": "mine",
+        "kind": "check",
+        "ref_verdict": true,
+        "my_verdict": true,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 0,
+        "path_agree": true
+      },
+      {
+        "name": "nested universes accumulate to Type 2",
+        "suite": "mine",
+        "kind": "check",
+        "ref_verdict": true,
+        "my_verdict": true,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 0,
+        "path_agree": true
+      },
+      {
+        "name": "Pi over Type 1 lands at Type 2",
+        "suite": "mine",
+        "kind": "check",
+        "ref_verdict": true,
+        "my_verdict": true,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 0,
+        "path_agree": true
+      },
+      {
+        "name": "S with universe variables",
+        "suite": "mine",
+        "kind": "check",
+        "ref_verdict": true,
+        "my_verdict": true,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 0,
+        "path_agree": true
+      },
+      {
+        "name": "applied dependent identity",
+        "suite": "mine",
+        "kind": "check",
+        "ref_verdict": true,
+        "my_verdict": true,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 0,
+        "path_agree": true
+      },
+      {
+        "name": "eta with a redex expected type",
+        "suite": "mine",
+        "kind": "check",
+        "ref_verdict": true,
+        "my_verdict": true,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 1,
+        "path_agree": true
+      },
+      {
+        "name": "defeq eta: f =?= lam x. f x",
+        "suite": "mine",
+        "kind": "defeq",
+        "ref_verdict": true,
+        "my_verdict": true,
+        "want": true,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 0,
+        "path_agree": true
+      },
+      {
+        "name": "defeq eta, symmetric: lam x. f x =?= f",
+        "suite": "mine",
+        "kind": "defeq",
+        "ref_verdict": true,
+        "my_verdict": true,
+        "want": true,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 0,
+        "path_agree": true
+      },
+      {
+        "name": "defeq distinct variables are not equal",
+        "suite": "mine",
+        "kind": "defeq",
+        "ref_verdict": false,
+        "my_verdict": false,
+        "want": false,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 0,
+        "path_agree": true
+      },
+      {
+        "name": "defeq alpha",
+        "suite": "mine",
+        "kind": "defeq",
+        "ref_verdict": true,
+        "my_verdict": true,
+        "want": true,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 0,
+        "path_agree": true
+      },
+      {
+        "name": "defeq eta does not fire for a non-function neutral",
+        "suite": "mine",
+        "kind": "defeq",
+        "ref_verdict": false,
+        "my_verdict": false,
+        "want": false,
+        "agree": true,
+        "ref_fail": null,
+        "my_fail": null,
+        "my_beta_steps": 0,
+        "path_agree": true
+      },
+      {
+        "name": "Girard: Type 0 : Type 0",
+        "suite": "mine",
+        "kind": "check_reject",
+        "ref_verdict": false,
+        "my_verdict": false,
+        "agree": true,
+        "ref_fail": {
+          "path": [],
+          "kind": "mismatch",
+          "expected": "Type 0",
+          "actual": "Type 1",
+          "message": "expected Type 0, got Type 1"
+        },
+        "my_fail": {
+          "path": [],
+          "kind": "mismatch",
+          "expected": "Type 0",
+          "actual": "Type 1",
+          "message": "inferred type is not definitionally equal to the expected type"
+        },
+        "my_beta_steps": 0,
+        "path_agree": true
+      },
+      {
+        "name": "Type 1 : Type 1 (wrong universe)",
+        "suite": "mine",
+        "kind": "check_reject",
+        "ref_verdict": false,
+        "my_verdict": false,
+        "agree": true,
+        "ref_fail": {
+          "path": [],
+          "kind": "mismatch",
+          "expected": "Type 1",
+          "actual": "Type 2",
+          "message": "expected Type 1, got Type 2"
+        },
+        "my_fail": {
+          "path": [],
+          "kind": "mismatch",
+          "expected": "Type 1",
+          "actual": "Type 2",
+          "message": "inferred type is not definitionally equal to the expected type"
+        },
+        "my_beta_steps": 0,
+        "path_agree": true
+      },
+      {
+        "name": "polymorphic identity type : Type 0 (wrong universe)",
+        "suite": "mine",
+        "kind": "check_reject",
+        "ref_verdict": false,
+        "my_verdict": false,
+        "agree": true,
+        "ref_fail": {
+          "path": [],
+          "kind": "mismatch",
+          "expected": "Type 0",
+          "actual": "Type 1",
+          "message": "expected Type 0, got Type 1"
+        },
+        "my_fail": {
+          "path": [],
+          "kind": "mismatch",
+          "expected": "Type 0",
+          "actual": "Type 1",
+          "message": "inferred type is not definitionally equal to the expected type"
+        },
+        "my_beta_steps": 0,
+        "path_agree": true
+      },
+      {
+        "name": "dependent application, wrong argument",
+        "suite": "mine",
+        "kind": "check_reject",
+        "ref_verdict": false,
+        "my_verdict": false,
+        "agree": true,
+        "ref_fail": {
+          "path": [
+            "arg"
+          ],
+          "kind": "mismatch",
+          "expected": "A",
+          "actual": "B",
+          "message": "expected A, got B"
+        },
+        "my_fail": {
+          "path": [
+            "arg"
+          ],
+          "kind": "mismatch",
+          "expected": "free3",
+          "actual": "free2",
+          "message": "argument type does not match the domain"
+        },
+        "my_beta_steps": 0,
+        "path_agree": true
+      },
+      {
+        "name": "Pi domain is not a type",
+        "suite": "mine",
+        "kind": "infer_reject",
+        "ref_verdict": false,
+        "my_verdict": false,
+        "agree": true,
+        "ref_fail": {
+          "path": [
+            "domain"
+          ],
+          "kind": "not-a-type",
+          "expected": "a universe",
+          "actual": "(A -> A)",
+          "message": "expected a type, got (A -> A)"
+        },
+        "my_fail": {
+          "path": [
+            "domain"
+          ],
+          "kind": "not-a-type",
+          "expected": "a universe (Type i)",
+          "actual": "(Pi x0:free3. free3)",
+          "message": "free0 is not a type (its type is (Pi x0:free3. free3))"
+        },
+        "my_beta_steps": 0,
+        "path_agree": true
+      },
+      {
+        "name": "binder annotation is not a type",
+        "suite": "mine",
+        "kind": "infer_reject",
+        "ref_verdict": false,
+        "my_verdict": false,
+        "agree": true,
+        "ref_fail": {
+          "path": [
+            "binder"
+          ],
+          "kind": "not-a-type",
+          "expected": "a universe",
+          "actual": "(A -> A)",
+          "message": "expected a type, got (A -> A)"
+        },
+        "my_fail": {
+          "path": [
+            "binder"
+          ],
+          "kind": "not-a-type",
+          "expected": "a universe (Type i)",
+          "actual": "(Pi x0:free3. free3)",
+          "message": "free0 is not a type (its type is (Pi x0:free3. free3))"
+        },
+        "my_beta_steps": 0,
+        "path_agree": true
+      },
+      {
+        "name": "type-level self-application",
+        "suite": "mine",
+        "kind": "check_reject",
+        "ref_verdict": false,
+        "my_verdict": false,
+        "agree": true,
+        "ref_fail": {
+          "path": [
+            "body",
+            "func"
+          ],
+          "kind": "not-pi",
+          "expected": "a Pi type",
+          "actual": "Type 0",
+          "message": "applied a non-function of type Type 0"
+        },
+        "my_fail": {
+          "path": [
+            "body",
+            "func"
+          ],
+          "kind": "not-pi",
+          "expected": "a Pi type",
+          "actual": "Type 0",
+          "message": "function type is not a Pi type"
+        },
+        "my_beta_steps": 0,
+        "path_agree": true
+      }
+    ]
+  },
+  "observer_measurement": {
+    "verdicts_agree": "43/43",
+    "strategy_probe": [
+      {
+        "name": "redex under a Pi binder (whnf 0, normalize 1)",
+        "whnf_steps": 0,
+        "normalize_steps": 1,
+        "differ": true
+      },
+      {
+        "name": "redex in an argument position (whnf 1, normalize 2)",
+        "whnf_steps": 1,
+        "normalize_steps": 2,
+        "differ": true
+      },
+      {
+        "name": "redex at the head only (whnf 1, normalize 1)",
+        "whnf_steps": 1,
+        "normalize_steps": 1,
+        "differ": false
+      },
+      {
+        "name": "nested redexes under two binders (whnf 0, normalize 2)",
+        "whnf_steps": 0,
+        "normalize_steps": 2,
+        "differ": true
+      }
+    ],
+    "strategy_probe_all_differ_except_head_only": true,
+    "note": "Step counts are the frame-dependent half: the same term takes different numbers of beta steps under head-beta whnf and full normalization. First-failure paths on the shared+my suites agree (all rejections here are singly-bad); path differences appear only on doubly-bad terms, measured in the battery."
+  }
+}
