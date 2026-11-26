@@ -124,8 +124,9 @@ auditable from the repo alone.
   continuity layer. Rung 1 sealed 2026-11-25; rung 2 Nat sealed
   the same day; the weights kernel sealed the same evening.
   The next rung (Prop) is the open decision.
-- **Status:** sealed, held — weights kernel built and sealed
-  2026-11-25. MatrixMachine lockstep 41/41 (count 1,338,752
+- **Status:** sealed, published 2026-11-26 —
+  https://github.com/zeek20freak/dependent-types-in-weights.
+  MatrixMachine lockstep 41/41 (count 1,338,752
   nonzero parameters, ±500 soft — two registry entries are
   estimates, disclosed in `MATRIX_MACHINE_STATUS.md`); independent
   check 41/41 under a fresh harness (its script was lost to /tmp
@@ -135,6 +136,6 @@ auditable from the repo alone.
   of the registry — the machine is 96.3% never-read against the
   41-case bar. One open fork, named in `STILL-CHECKER-DT.md`: if
   `__init__` ctx writes count as scaffolding rather than machine
-  ops, the floor is 4,648 shared. The publish gate is met — the
-  weights kernel exists. Publishing (a public repo under
-  zeeker__'s account) is zeeker__'s call.
+  ops, the floor is 4,648 shared — a separate mechanism, the
+  machine proper with setup excluded. The publish gate was met —
+  the weights kernel exists — and the repo is live.
