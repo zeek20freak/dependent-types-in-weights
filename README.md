@@ -134,8 +134,9 @@ auditable from the repo alone.
   `MATRIX_MACHINE_STATUS.md`, not re-runnable from this package);
   Still floor 47,687 shared weights (49,196 pruning-only), 3.56%
   of the registry — the machine is 96.3% never-read against the
-  41-case bar. One open fork, named in `STILL-CHECKER-DT.md`: if
-  `__init__` ctx writes count as scaffolding rather than machine
-  ops, the floor is 4,648 shared — a separate mechanism, the
-  machine proper with setup excluded. The publish gate was met —
-  the weights kernel exists — and the repo is live.
+  41-case bar. The floor is layered, named in
+  `STILL-CHECKER-DT.md`: Layer 0, machine proper, 4,648 shared
+  (6,157 pruning-only); Layer 1, as shipped, 47,687 shared
+  (49,196 pruning-only). Both layers are always reported
+  together. The publish gate was met — the weights kernel
+  exists — and the repo is live.

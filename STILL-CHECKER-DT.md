@@ -82,23 +82,28 @@ writes: each ctx type is a dense tree (2,047 slots × 3 one-hots
 — `slot_onehot` sets kind, level, idx even for EMPTY nodes),
 so one ctx register costs ~6,141 gating positions, and 7
 registers are written. `write_tree_reg` itself contributes 0
-(dead code). Two mechanisms — a fork, not two readings of one
-number (Zack, 2026-11-25: "fork is the right word"; the 4,648
-floor is a separate mechanism):
+(dead code). Two mechanisms — first named a fork, not two
+readings of one number (Zack, 2026-11-25: "fork is the right
+word"; the 4,648 floor is a separate mechanism):
 
-- **Primary (registry model):** the gating covers dest writes,
-  and the `__init__` ctx writes are dest writes, so the 43,039
-  counts. Floor 47,687 shared / 49,196 pruning-only.
-- **Alternative (scaffolding):** if the `__init__` writes are
-  setup scaffolding (direct assignment, not a matrix op), the
-  gating contributes 0 and the floor is **4,648** shared /
-  **6,157** pruning-only (0.35% / 0.46%). Recorded in the result
-  JSON as `floor_alt_gating_as_scaffolding`.
+- **Layer 0 — machine proper (scaffolding):** if the `__init__`
+  writes are setup scaffolding (direct assignment, not a matrix
+  op), the gating contributes 0 and the floor is **4,648**
+  shared / **6,157** pruning-only (0.35% / 0.46%). Recorded in
+  the result JSON as `floor_alt_gating_as_scaffolding`.
+- **Layer 1 — as shipped (registry model):** the gating covers
+  dest writes, and the `__init__` ctx writes are dest writes,
+  so the 43,039 counts. Floor 47,687 shared / 49,196
+  pruning-only.
 
-The difference is exactly the 43,039. The measurement does not
-settle which mechanism is the machine; it names the fork. The
-4,648 floor is a separate mechanism — the machine proper, setup
-excluded — not a recount of the same machine.
+The difference is exactly the 43,039. Resolved 2026-11-26
+(Zack: keep as layers): the fork is a layered measurement, not
+a choice. Layer 0 is the machine as an instrument, setup
+excluded; Layer 1 is the machine plus its setup. The boundary
+is the `__init__` writes (direct assignment, bypassing the
+write path) — checkable, not a judgment call. Both layers are
+always reported together; neither is quoted alone as "the
+floor." The next rung reports both layers the same way.
 
 ## The twins
 
